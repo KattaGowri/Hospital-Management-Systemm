@@ -1,0 +1,352 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-image: url('images/hosp.jpg'); /* Background Image */
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    animation: fadeInBg 2s ease-in-out; /* Background Fade-In Animation */
+}
+body.patient-registration-page {
+    background-image: url('images/patient.jpg'); /* Patient-specific background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    margin-bottom: 15px;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+h2 {
+    text-align: center;
+    color: #0073e6;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+}
+
+/* Header Styling */
+header {
+    background-color: rgba(0, 115, 230, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: zoomIn 1s ease-in-out;
+}
+
+header p {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(0, 91, 181, 0.9);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    animation: slideInFromTop 1.5s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+    transform: scale(1.1);
+}
+
+/* Section Styling */
+section {
+    padding: 40px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+section h2 {
+    color: #0073e6;
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 10px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #005bb5;
+    transition: color 0.3s ease;
+}
+
+details summary:hover {
+    color: #ff6600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(0, 115, 230, 0.9);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: slideInFromBottom 1.5s ease-in-out;
+}
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBg {
+    0% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Section Hover Animation */
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Login Section Styling */
+#login-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 1300px;
+}
+
+.login-card {
+    background: rgba(0, 115, 230, 0.9);
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 20px;
+    width: 20%;
+    min-width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.login-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    margin-bottom: 20px;
+}
+
+.login-card button {
+    background: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.login-card button:hover {
+    background: #cc5200;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #login-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-card {
+        width: 90%;
+    }
+}
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Apply to the whole body */
